@@ -1,0 +1,13 @@
+---
+sudo: true
+
+env:
+  IMAGE_NAME: johnstrunk/buildozer
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+script:
+  - ./hooks/build
