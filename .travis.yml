@@ -1,13 +1,10 @@
 ---
-sudo: true
-
-env:
-  IMAGE_NAME: johnstrunk/buildozer
+sudo: false
 
 addons:
   apt:
     packages:
-      - docker-ce
+      - curl
 
 script:
-  - ./hooks/build
+  - curl -X POST "$DOCKER_WEBHOOK" >& /dev/null
