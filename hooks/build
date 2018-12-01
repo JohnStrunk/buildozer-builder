@@ -1,7 +1,8 @@
 #! /bin/bash
 
-set -e -opipefail 
+set -e -o pipefail
 
+rm -rf buildozer
 git clone --depth 1 https://github.com/kivy/buildozer.git
 cd buildozer
 
