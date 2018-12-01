@@ -1,6 +1,8 @@
 #! /bin/bash
 
-git clone --depth 1 https://github.com/kivy/buildozer.git
-cd buildozer || exit 1;
+set -e -opipefail 
 
-docker build -t "$IMAGE_NAME" . || exit 1;
+git clone --depth 1 https://github.com/kivy/buildozer.git
+cd buildozer
+
+docker build -t "$IMAGE_NAME" .
